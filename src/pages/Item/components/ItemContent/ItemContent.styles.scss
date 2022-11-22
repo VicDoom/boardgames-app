@@ -1,0 +1,33 @@
+.item-content {
+  & ~ .wrapper {
+    padding-bottom: 20px;
+  }
+  padding-top: 50px;
+  background-color: var(--neutral-color);
+  &--title {
+    padding-bottom: 30px;
+  }
+  &--picture {
+    width: 100%;
+    border: 1px solid rgba(217, 217, 217, 0.39);
+    border-radius: 9px;
+    background-color: var(--white-color);
+    img {
+      width: 380px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &-divider {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-gap: 35px;
+  }
+  &-buy {
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}

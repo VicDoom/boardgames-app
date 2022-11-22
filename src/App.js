@@ -1,9 +1,11 @@
 import './App.scss';
-import {Main} from "./pages/Main/Main";
+import {Main, Item, About} from "./pages";
 
 function App() {
   return (
     <Main />
+    //   <Item />
+    //   <About />
   );
 }
 

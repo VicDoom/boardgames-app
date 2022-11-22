@@ -1,0 +1,33 @@
+.about-content {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  h1 {
+    padding-bottom: 20px;
+  }
+
+  &-block {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 30px;
+    padding-bottom: 80px;
+
+    &__info {
+
+      &-title {
+        padding-bottom: 15px;
+      }
+
+    }
+
+    &__picture {
+      img {
+        border-radius: 9px;
+      }
+    }
+
+    &--2 {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
+  }
+}

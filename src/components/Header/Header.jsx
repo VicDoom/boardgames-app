@@ -2,6 +2,8 @@ import '../../App.scss';
 import './Header.styles.scss';
 import logo_pic from "../../images/header_logo.svg"
 import phone_pic from "../../images/header_phone.svg"
+import { InputWithSearch } from "../InputWithSearch/InputWithSearch";
+
 export const Header = () => {
     return (
         <header className="header wrapper wrapper--header">
@@ -11,22 +13,7 @@ export const Header = () => {
                         aBoard games
                     </h1>
             </div>
-            <div className="header__search">
-                <form action="#">
-                    <input type="text" className="header__search-input" placeholder="Найти игру..." />
-                        <button type="submit" className="header__search-button">search</button>
-                </form>
-                <div className="header__search-results header__search-results--hidden">
-                    <div className="header__search-item">Warhammer 40,000: Chaos Space Marines</div>
-                    <div className="header__search-item">На марсе</div>
-                    <div className="header__search-item">Broken Realms: Horrek's Dreadlance</div>
-                    <div className="header__search-item">Таверна Красный дракон</div>
-                    <div className="header__search-item header__search-item--no-items">Нет данных</div>
-                    <div className="header__search-recent-item header__search-recent-item--hidden">Последний поиск:
-                    </div>
-                    <div className="header__search-recent-item header__search-recent-item--hidden" />
-                </div>
-            </div>
+            <InputWithSearch />
             <div className="header__phone">
                 <div className="header__phone-icon">
                     <img className="header__phone-icon" src={phone_pic} alt="phone" />

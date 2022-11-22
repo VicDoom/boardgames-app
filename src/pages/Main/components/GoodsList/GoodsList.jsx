@@ -1,4 +1,4 @@
-import {Card} from "../../../../components/Card/Card";
+import {Card} from "../../../../components";
 import card_1 from '../../../../images/card_1.png';
 import card_2 from '../../../../images/card_2.png';
 import card_3 from '../../../../images/card_3.png';
