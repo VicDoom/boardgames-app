@@ -1,11 +1,8 @@
 import './Tabs.styles.scss'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 export const Tabs = ({name, titles, contents}) => {
 	const [selectedTab, setSelectedTab] = useState(0)
-	useEffect(() => {
-		console.log(selectedTab);
-	}, [selectedTab])
 	return (
 		<div className={`tabs tab-${name}`}>
 			<div className="tabs__tab-titles">
@@ -26,7 +23,7 @@ export const Tabs = ({name, titles, contents}) => {
 						className={`tabs__tab-content tabs__tab-content-${index} ${selectedTab === index && 'tabs__tab-content--active'} text`}
 					>
 						{titles[selectedTab]}:
-						<div className={`tabs__tab-content-inner`}>{item}</div>
+						<div className={`tabs__tab-content-inner text text--medium`}>{item}</div>
 					</div>
 				))}
 			</div>

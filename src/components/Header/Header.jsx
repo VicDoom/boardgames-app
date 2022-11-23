@@ -3,11 +3,14 @@ import './Header.styles.scss';
 import logo_pic from "../../images/header_logo.svg"
 import phone_pic from "../../images/header_phone.svg"
 import { InputWithSearch } from "../InputWithSearch/InputWithSearch";
+import {useNavigate} from "react-router-dom";
 
 export const Header = () => {
+    const navigate = useNavigate();
+
     return (
         <header className="header wrapper wrapper--header">
-            <div className="header__logo">
+            <div className="header__logo" onClick={() => navigate('/')}>
                 <img className="header__logo-icon" src={logo_pic} alt="dice" />
                     <h1 className="header__logo-text">
                         aBoard games

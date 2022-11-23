@@ -1,7 +1,10 @@
 import {useEffect} from "react";
 import './Menu.styles.scss'
+import {useNavigate} from "react-router-dom";
 
 export const Menu = () => {
+
+    const navigate = useNavigate();
 
     useEffect(
         () => {
@@ -28,7 +31,7 @@ export const Menu = () => {
                 <div className="menu__element text text--bold">Каталог</div>
                 <div className="menu__element text text--bold">Успей купить</div>
                 <div className="menu__element text text--bold">Мероприятия</div>
-                <div className="menu__element text text--bold">Контакты</div>
+                <div className="menu__element text text--bold" onClick={() => navigate('/about')}>Контакты</div>
             </div>
         </div>
     )

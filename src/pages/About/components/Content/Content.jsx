@@ -1,5 +1,7 @@
 import pic1 from '../../images/image-1.png'
 import pic2 from '../../images/image-2.png'
+import pic3 from '../../images/image-3.png'
+import pic4 from '../../images/image-4.png'
 import './Content.styles.scss'
 
 export const Content = () => {
@@ -25,10 +27,10 @@ export const Content = () => {
                 </div>
                 <div className="about-content-block about-content-block--2">
                     <div className="about-content-block__picture">
-                        <img src={pic1} alt="pic1"/>
+                        <img src={pic3} alt="pic1"/>
                     </div>
                     <div className="about-content-block__picture">
-                        <img src={pic2} alt="pic2"/>
+                        <img src={pic4} alt="pic2"/>
                     </div>
                     <div className="about-content-block__info">
                         <h5 className="about-content-block__info-title">

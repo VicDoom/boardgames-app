@@ -4,10 +4,10 @@ import card_time from '../../images/card_time.svg'
 import card_buy from '../../images/card_buy.svg'
 import {Button} from "../Button/Button";
 
-export const Card = ({ picture, people, time, age, title, price }) => {
+export const Card = ({ picture, people, time, age, title, price, onClick }) => {
     return (
         <div className="card">
-            <div className="card__top">
+            <div className="card__top" onClick={onClick}>
                 <img src={picture} alt="card" />
             </div>
             <div className="card__bottom">
