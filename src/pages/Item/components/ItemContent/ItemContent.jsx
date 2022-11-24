@@ -2,7 +2,7 @@ import {CardBuy} from "../CardBuy";
 import {Tabs} from '../Tabs'
 import './ItemContent.styles.scss'
 import {Card} from "../../../../components";
-import {GoodsInfo} from "../../../Main/components/GoodsList/GoodsList";
+import {GoodsInfo} from "../../../../GoodsInfo.mock";
 import {useNavigate} from "react-router-dom";
 
 const getRandomGoods = (number, exceptNumber) =>
@@ -28,7 +28,7 @@ export const ItemContent = ({ id }) => {
                     <Tabs name="item-content-tab" titles={['Описание', 'Характеристики']} contents={[description, characteristics]} />
                 </div>
                 <div className="item-content-buy">
-                    <CardBuy people={people} time={time} age={age} price={price} />
+                    <CardBuy id={id} people={people} time={time} age={age} price={price} />
                     <h6 className="text text--bold">С этим товаром покупают</h6>
                     <Card {...recommend[0]} onClick={() => navigate(`/item/${recommend[0].id}`)} />
                     <Card {...recommend[1]} onClick={() => navigate(`/item/${recommend[1].id}`)} />

@@ -3,8 +3,10 @@ import card_people from '../../images/card_people.svg'
 import card_time from '../../images/card_time.svg'
 import card_buy from '../../images/card_buy.svg'
 import {Button} from "../Button/Button";
+import {useDispatch, useSelector} from "react-redux";
 
-export const Card = ({ picture, people, time, age, title, price, onClick }) => {
+export const Card = ({ id, picture, people, time, age, title, price, onClick }) => {
+    const dispatch = useDispatch();
     return (
         <div className="card">
             <div className="card__top" onClick={onClick}>
@@ -38,10 +40,10 @@ export const Card = ({ picture, people, time, age, title, price, onClick }) => {
                     {title}
                 </div>
                 <div className="card__bottom-price">
-                    {price}
+                    {price} ₽
                 </div>
                 <div className="card__bottom-buttons">
-                    <Button title="В корзину" icon={card_buy}/>
+                    <Button title="В корзину" icon={card_buy} onClick={() => dispatch({type: 'INCREMENT', id: id})} />
                     <Button title="Купить в один клик" />
                 </div>
             </div>

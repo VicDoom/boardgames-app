@@ -2,8 +2,10 @@ import card_people from "../../../../images/card_people.svg";
 import card_time from "../../../../images/card_time.svg";
 import './CardBuy.styles.scss'
 import {Button} from "../../../../components";
+import {useDispatch} from "react-redux";
 
-export const CardBuy = ({people, time, age, price}) => {
+export const CardBuy = ({id, people, time, age, price}) => {
+    const dispatch = useDispatch();
     return (
         <div className="card-buy">
             <div className="card-buy-info">
@@ -30,10 +32,10 @@ export const CardBuy = ({people, time, age, price}) => {
                 </div>
             </div>
             <div className="card-buy-price">
-                {price}
+                {price} ₽
             </div>
             <div className="card-buy-controls">
-                <Button title="В корзину" />
+                <Button title="В корзину" onClick={() => dispatch({ type: 'INCREMENT', id })} />
                 <Button title="Купить в один клик" />
             </div>
         </div>

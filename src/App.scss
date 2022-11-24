@@ -4,6 +4,12 @@ body, html, input, h1, h2, h3, h4, h5, h6 {
   font-family: 'Trebuchet MS', SansSerif, sans-serif;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --black-color: #2A2A2A;
   --white-color: #FFFFFF;

@@ -1,8 +1,8 @@
 import './Button.styles.scss';
 
-export const Button = ({ title, icon }) => {
+export const Button = ({ title, icon, onClick, size = 'medium' }) => {
     return (
-        <div className="button">
+        <div className={`button ${size === 'large' && 'button--large'}`} onClick={onClick}>
             <div className="button-text">{title}</div>
             {icon && (
                 <div className="button-icon">

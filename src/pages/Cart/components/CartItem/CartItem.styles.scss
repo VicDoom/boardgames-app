@@ -1,0 +1,32 @@
+.cart-item {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 2fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+  &__title, &__price, &__amount-controls {
+    font-size: 20px;
+  }
+  &__title {
+    text-align: center;
+    line-height: 25px;
+  }
+  &__picture {
+    img {
+      width: 100px;
+    }
+  }
+  &__amount {
+    &-controls {
+      display: flex;
+      gap: 15px;
+    }
+    &-decrease, &-increase {
+      cursor: pointer;
+    }
+  }
+  &__delete-control {
+    cursor: pointer;
+  }
+}
