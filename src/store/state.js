@@ -1,3 +1,3 @@
 export const defaultState = {
-    cart: {}
+    cart: JSON.parse(localStorage.getItem('cart')) || {},
 }

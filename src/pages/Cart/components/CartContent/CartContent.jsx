@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 
 export const CartContent = () => {
     const cart = useSelector(state => state.cart)
+    console.log(cart)
 
     return (
         <div className="cart wrapper wrapper--screen">
