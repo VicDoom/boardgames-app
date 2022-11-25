@@ -3,13 +3,15 @@ import card_people from '../../images/card_people.svg'
 import card_time from '../../images/card_time.svg'
 import card_buy from '../../images/card_buy.svg'
 import {Button} from "../Button/Button";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
-export const Card = ({ id, picture, people, time, age, title, price, onClick }) => {
+export const Card = ({ id, picture, people, time, age, title, price }) => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     return (
         <div className="card">
-            <div className="card__top" onClick={onClick}>
+            <div className="card__top" onClick={() => navigate(`/item/${id}`)}>
                 <img src={picture} alt="card" />
             </div>
             <div className="card__bottom">

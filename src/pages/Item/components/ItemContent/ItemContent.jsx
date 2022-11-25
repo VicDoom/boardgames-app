@@ -5,7 +5,7 @@ import {Card} from "../../../../components";
 import {GoodsInfo} from "../../../../GoodsInfo.mock";
 import {useNavigate} from "react-router-dom";
 
-const getRandomGoods = (number, exceptNumber) =>
+export const getRandomGoods = (number, exceptNumber = null) =>
     GoodsInfo
         .filter(item => item.id !== exceptNumber)
         .sort(() => 0.5 - Math.random())
@@ -30,8 +30,8 @@ export const ItemContent = ({ id }) => {
                 <div className="item-content-buy">
                     <CardBuy id={id} people={people} time={time} age={age} price={price} />
                     <h6 className="text text--bold">С этим товаром покупают</h6>
-                    <Card {...recommend[0]} onClick={() => navigate(`/item/${recommend[0].id}`)} />
-                    <Card {...recommend[1]} onClick={() => navigate(`/item/${recommend[1].id}`)} />
+                    <Card {...recommend[0]} />
+                    <Card {...recommend[1]} />
                 </div>
             </div>
         </div>

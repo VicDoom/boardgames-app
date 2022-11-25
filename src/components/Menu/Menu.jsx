@@ -28,7 +28,7 @@ export const Menu = () => {
         <div className="menu wrapper">
             <div className="menu__container">
                 <div className="menu__marker" />
-                <div className="menu__element text text--bold">Каталог</div>
+                <div className="menu__element text text--bold" onClick={() => navigate('/catalog/all')}>Каталог</div>
                 <div className="menu__element text text--bold">Успей купить</div>
                 <div className="menu__element text text--bold">Мероприятия</div>
                 <div className="menu__element text text--bold" onClick={() => navigate('/about')}>Контакты</div>

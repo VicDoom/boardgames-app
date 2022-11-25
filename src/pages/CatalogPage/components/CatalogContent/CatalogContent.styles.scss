@@ -1,0 +1,11 @@
+.catalog-page {
+  background-color: var(--neutral-color);
+  &__title {
+    padding-bottom: 20px;
+  }
+  &__goods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-gap: 30px;
+  }
+}
