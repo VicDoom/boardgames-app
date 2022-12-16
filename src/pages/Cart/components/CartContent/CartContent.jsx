@@ -3,8 +3,7 @@ import {CartItem, CartBuyCard} from "../../components";
 import {useSelector} from "react-redux";
 
 export const CartContent = () => {
-    const cart = useSelector(state => state.cart)
-    console.log(cart)
+    const cart = useSelector(state => state.cart.cart)
 
     return (
         <div className="cart wrapper wrapper--screen">

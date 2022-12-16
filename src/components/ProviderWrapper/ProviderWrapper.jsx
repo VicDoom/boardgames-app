@@ -2,7 +2,7 @@ import {useSelector} from "react-redux";
 import {useEffect} from "react";
 
 export const ProviderWrapper = ({ children }) => {
-    const cart = useSelector(state => state.cart)
+    const cart = useSelector(state => state.cart.cart)
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])

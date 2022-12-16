@@ -11,7 +11,7 @@ export const Card = ({ id, picture, people, time, age, title, price }) => {
     const dispatch = useDispatch();
     return (
         <div className="card">
-            <div className="card__top" onClick={() => navigate(`/item/${id}`)}>
+            <div className="card__top" onClick={() => {navigate(`/item/${id}`)}}>
                 <img src={picture} alt="card" />
             </div>
             <div className="card__bottom">
